@@ -8,7 +8,7 @@
  Connection conn=null;
 
  try{
-	 String url="jdbc:mysql://localhost:3306/webmarketDB";
+	 String url="jdbc:mysql://localhost:3306/webmarketDB"; //webmarketDB, shoppingMall
 	 String user="root";
 	 String password="1234";
 	 
@@ -17,7 +17,7 @@
 	 if(conn==null){
 		 Context init = new InitialContext();
 		 DataSource ds = 
-		     (DataSource)init.lookup("java:comp/env/jdbc/webmarketDB");
+		     (DataSource)init.lookup("java:comp/env/jdbc/webmarketDB"); //webmarketDB, shoppingMall
 		      conn=ds.getConnection();
 	 }
  }catch(Exception e){

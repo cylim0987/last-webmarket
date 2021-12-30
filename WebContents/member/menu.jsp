@@ -98,8 +98,8 @@ body {
 		<div class="items dropdown" id="account"> 
 			<span class="dropbtn" style="padding-left: 10px;">ACCOUNT</span>
 			<div class="dropdown-content" style="padding-top: 20px;">
-				<a class="nav-link" href="./member/loginMember.jsp">로그인</a>
-				<a class="nav-link" href="./member/addMember.jsp">회원가입</a>
+				<a class="nav-link" href="./loginMember.jsp">로그인</a>
+				<a class="nav-link" href="./addMember.jsp">회원가입</a>
 			</div>
 		</div>
 		

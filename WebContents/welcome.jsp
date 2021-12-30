@@ -49,3 +49,7 @@
 <%@ include file="footer.jsp" %>
 </body>
 </html>
+<!-- web.xml에 welcome-file-list에 페이지를 등록하면 
+    welcome페이지로 사용가능 
+http://localhost:8080/WebMarket/welcome.jsp
+-->

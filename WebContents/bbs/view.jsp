@@ -1,5 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+String sessionId = (String) session.getAttribute("sessionId");
+%>
 <!DOCTYPE html><html><head>
 <link rel="stylesheet" 
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -59,7 +62,14 @@ ${bbs.re_level} --%>
         <div class="col-sm-offset-2 col-sm-10">
         	<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">삭제
         	</button>
+        	
+
+	<c:if test= "${sessionId.equals(sessionId)}">
              <input type="submit" class="btn btn-success" value="수정">
+             </c:if>
+            <% System.out.println("sessionId:" + sessionId); %>
+            
+             
             <a href="./BbsListAction.go?pageNum=${page}&items=${items}&text=${text}" class="btn btn-primary">목록</a>
             <a href="./BbsReplyForm.go?id=${sessionId}&pageNum=${page}&items=${items}&text=${text}&num=${bbs.num}&ref=${bbs.ref}&re_step=${bbs.re_step}&re_level=${bbs.re_level}" 
             class="btn btn-warning">답변</a>

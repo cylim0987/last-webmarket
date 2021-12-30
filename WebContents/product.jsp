@@ -23,8 +23,8 @@ Product product = null;
 if (rs.next()) {
 	product = new Product(id, rs.getString("p_name"), rs.getInt("p_Price"));
 }
-
-/* ArrayList<RecentProduct> recentProducts = (ArrayList<RecentProduct>) session.getAttribute("recentProducts");
+/* 
+ArrayList<RecentProduct> recentProducts = (ArrayList<RecentProduct>) session.getAttribute("recentProducts");
 
 RecentProduct recentProduct = new RecentProduct(id, product.getPanme());
 
@@ -155,7 +155,7 @@ if (recentProducts == null) {
 		%>
 	</div>
 
-	<div style="border: 1px solid black; height: 100px; text-align: center; line-height: 100px;"><a class="nav-link" href="<c:url value="/ReviewListAction.to?pageNum=1"/>">REVIEW</a></div>
+	<div style="border: 1px solid black; height: 100px; text-align: center; line-height: 100px;">리뷰 게시판 or 리뷰 게시판으로 가는 링크</div>
 	<jsp:include page="footer.jsp" />
 </body>
 </html>

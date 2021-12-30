@@ -30,7 +30,12 @@
             }/* else{
             	  out.print("<h2 class='alert alert-secondary'>회원정보가 삭제되었습니다.</h2>");
             }  */     
+            
+         
       %>
+      
+         <%@ include file="../footer.jsp" %>
+      
   </div>
 </body>
 </html>

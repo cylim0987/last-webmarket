@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%--
 <%
 String sessionId = (String) session.getAttribute("sessionId");
-%> 
---%>
+%>
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -68,7 +66,7 @@ body {
 				<a class="nav-link" href="./products.jsp?category=Top">TOP</a>
 				<a class="nav-link" href="./products.jsp?category=BOTTOM">BOTTOM</a>
 				<a class="nav-link" href="./products.jsp?category=OUTER">OUTER</a>
-				<a class="nav-link" href="<c:url value="/ReviewListAction.to?pageNum=1"/>">REVIEW</a>
+				<a class="nav-link" href="<c:url value="/ReviewBbsListAction.to?pageNum=1"/>">REVIEW</a>
 			</div>
 		</div>
 		<div class="items">
@@ -82,7 +80,6 @@ body {
 				<img src="./images/mainTop.png" style="height: 50px;">
 			</a>
 		</div>
-		<!--  <div class="items">ACCOUNT</div>  -->
 		
  <c:if test="${sessionId=='admin'}"> 
 		<div class="items dropdown" id="admin-menu"> 
@@ -106,21 +103,11 @@ body {
 			</div>
 		</div>
 		
+		<div class="items"><a href="./cart.jsp">CART</a></div>		
+		
+		
+		
 		<div class="items"><a href="./cart.jsp">CART</a></div>
 	</div>
 </body>
 </html>
-		<!-- 
-		<div class="items dropdown" id= "ACCOUNT">
-			<span class="dropbtn" style="padding-left: 10px;">ACCOUNT</span>
-			<div class="dropdown-content" style="padding-top: 20px;">
-			 <a class="nav-link" href="<c:url value="/member/loginMember.jsp" />">로그인</a>
-  	          <a class="nav-link" href="<c:url value="/member/addMember.jsp" />">회원 가입</a>
-		</div>
-		 -->
-		
-		
-		
-		
-		
-		
