@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-  <jsp:include page="/menu.jsp" />
+  <jsp:include page="./menu.jsp" />
   <div class="jumbotron">
       <div class="container">
         <h1 class="display-3">회원 정보</h1>

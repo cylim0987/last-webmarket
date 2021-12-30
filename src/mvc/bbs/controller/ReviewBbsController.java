@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import mvc.bbs.command.ActionCommand;
 import mvc.command.CommandReviewBbs;
 
 public class ReviewBbsController extends HttpServlet {
@@ -57,7 +56,7 @@ public class ReviewBbsController extends HttpServlet {
 	      while(itor.hasNext()) {
 	    	  String command = (String)itor.next();
 	    	 System.out.println(command+"="
-	    	        +((ActionCommand)reviewBbscommandMap.get(command)).getClass().getName());
+	    	        +((CommandReviewBbs)reviewBbscommandMap.get(command)).getClass().getName());
 	      }
 	    }catch(Exception e) {
 	    	System.out.println("에러:"+e.getMessage());

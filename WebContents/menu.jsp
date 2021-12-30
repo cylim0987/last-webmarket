@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%--
 <%
 String sessionId = (String) session.getAttribute("sessionId");
-%>
+%> 
+--%>
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -82,10 +84,24 @@ body {
 		</div>
 		<!--  <div class="items">ACCOUNT</div>  -->
 		
+ <c:if test="${sessionId=='admin'}"> 
+		<div class="items dropdown" id="admin-menu"> 
+			<span class="dropbtn" style="padding-left: 10px;">관리자용</span>
+			<div class="dropdown-content" style="padding-top: 20px;">
+				<a class="nav-link" href="./addProduct.jsp">상품등록</a>
+				<a class="nav-link" href="./editProduct.jsp?edit=update">상품수정</a>
+				<a class="nav-link" href="./editProduct.jsp?edit=delete">상품삭제</a>
+				
+			</div>
+		</div>
+ </c:if>
+		
+		
 		<div class="items dropdown" id="account"> 
 			<span class="dropbtn" style="padding-left: 10px;">ACCOUNT</span>
 			<div class="dropdown-content" style="padding-top: 20px;">
 				<a class="nav-link" href="./member/loginMember.jsp">로그인</a>
+				<a class="nav-link" href="./member/logoutMember.jsp">로그아웃</a>
 				<a class="nav-link" href="./member/addMember.jsp">회원가입</a>
 			</div>
 		</div>
